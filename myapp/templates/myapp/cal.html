@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+
+
+</head>
+<h1>calculation {{ name }}</h1>
+{% block content %}
+<h1>calculator </h1>
+<form  action="/add" >
+   Enter first number =<input type="number" name="num1"></br>
+    Enter second number =<input type="number" name="num2"></br>
+
+    <button type="submit" name="add"  > ADD</button>
+     <button type="submit" name="sub"  >Subtraction</button>
+    <button type="submit" name="mul"  >multipliction</button>
+    <button type="submit" name="div"  >division</button>
+
+</form>
+{% endblock %}
+
+</body>
+</html>
+
