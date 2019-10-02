@@ -1,10 +1,26 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.utils.datastructures import MultiValueDictKeyError
 
 from .forms import *
 #from .models import *
 
 # Create your views here.
+
+# email creator & adding serch bar  &  and if possible linkdin adding
+def ecreator(request, ):
+    fvalue = request.GET["fistname"]
+    lvalue = request.GET["lastname"]
+    dvalue = request.GET["domainname"]
+
+    if 'cre' in request.GET:
+        res1 = fvalue + lvalue + "@" + dvalue
+        print(res1)
+        return render(request, 'myapp/email.html', {'result': res1})
+
+
+
+
 
 #calculation
 def calu(request):
